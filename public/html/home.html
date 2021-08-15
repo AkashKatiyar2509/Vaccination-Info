@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--bootstrap css-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  <!--core css-->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Pacifico&family=Ubuntu&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Fonts Awesome Path -->
+  <script src="https://kit.fontawesome.com/6ff6c73007.js" crossorigin="anonymous"></script>
+
+  <!--bootstrap scripts-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+  <title>Vaccination-Info</title>
+</head>
+
+<body>
+
+  <!--navigation bar-->
+  <section id="Navigation">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+      <a class="navbar-brand brand-logo" href="">Vaccination-Info</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav navbar nav-custom ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Guidelines">Covid Guidelines</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              More
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/search-form">Vaccine Availability</a>
+              <a class="dropdown-item" href="/vaccine-info">Vaccine Info</a>
+
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contactus">Contact Us</a>
+        </li>
+      </ul>
+      </div>
+    </nav>
+  </section>
+
+  <!-- carousel -->
+  <section id="vaccine-carousel">
+    <div>
+
+      <div id="Vaccination-carousel-slide" class="carousel slide" data-ride="carousel" data-interval="2000">
+        <ol class="carousel-indicators">
+          <li data-target="#Vaccination-carousel-slide" data-slide-to="0" class="active"></li>
+          <li data-target="#Vaccination-carousel-slide" data-slide-to="1"></li>
+          <li data-target="#Vaccination-carousel-slide" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://raw.githubusercontent.com/AkashKatiyar2509/Internproject/master/public/assets/images/carousel-1.png" class="d-block w-100">
+          </div>
+          <div class="carousel-item">
+            <img src="https://raw.githubusercontent.com/AkashKatiyar2509/Internproject/master/public/assets/images/carousel-2.png" class="d-block w-100" />
+          </div>
+          <div class="carousel-item">
+            <img src="https://raw.githubusercontent.com/AkashKatiyar2509/Internproject/master/public/assets/images/carousel-3.png" class="d-block w-100">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <div class="vaccine-data">
+
+       <h4><img src="https://lh3.googleusercontent.com/-LHuSXAj6hXc/Vjz7h_AkiRI/AAAAAAAApWM/uVZysH6CFvc/s0/india-flag-animation.gif" alt="indian-flag" style="height:50px;width:50px;"> <h2>INDIA</h2></h4>
+       <h3 style="padding: 2% 0%;"><i class="fas fa-chart-line"></i> Live Vaccination statistics</h3>
+
+       <div class="row" >
+         <div class="col-lg-4 col-md-12 col-sm-12 outer stats border " >
+           <h5 id="newVaccinations" style="color: green; padding-bottom: 4%;"></h5>
+           <h5>New Vaccinations</h5>
+         </div>
+         <div class="col-lg-4 col-md-12 col-sm-12 stats border inner  " >
+           <h5 id="totalVaccinated" style="padding-bottom: 4%;margin-left:1px;"></h5>
+           <h5>Total Vaccinated</h5>
+         </div>
+         <div class="col-lg-4 col-md-12 col-sm-12 stats outer border " style="border-left:none">
+           <h5 id="peopleFullyVaccinated" style="padding-bottom: 4%;"></h5>
+           <h5>Fully Vaccinated</h5>
+         </div>
+       </div>
+       <h6 id="updateDate" style="padding-top: 2%;padding-bottom:100px;margin-bottom:20px;">Last Updated: </h6>
+     </div>
+
+     <!-- Features Section  -->
+        <section id="features">
+    <div class="feature"  >
+      <div class="headingFeature">
+        <h1 class="section-heading" style="color:white">Features</h1>
+      </div>
+      <div class="row feature-button">
+        <div class="col-xs-12 col-lg-4 col-md-12 col-sm-12 feature-1" id="vaccine-availability">
+          <img src="https://i2.wp.com/ajp.com.au/wp-content/uploads/2017/08/69475668_l.jpg?fit=2048%2C2048&ssl=1" alt="Later" class="feature-img">
+          <div class="text-spacing text-muted">
+            <p>You can check the availability of vaccine in your state/district.Cick the button below.</p>
+          </div>
+          <a href="/search-form"><button type="button"  class="btn  btn-success checkAvailabilityButton" onclick="togglefunction()">Check Availability</button></a>
+        </div>
+        <div class="col-xs-12 col-lg-4 col-md-12 col-sm-12 feature-2">
+          <img data-aos='fade-down' src="https://github.com/dev-it-aman/Vaccination-info/blob/main/public/assets/images/vaccine-notify.jpg?raw=true" alt="Later" class="feature-img">
+          <div class="text-spacing text-muted">
+            <p>In case of unavailablity of vaccine in your area, we will notify you as and when the vaccines will be available.</p>
+          </div>
+          <button type="button" class="btn btn-lg btn-success" onclick="location.href='/notify'">Get Notified</button>
+
+        </div>
+        <div class="col-xs-12 col-lg-4 col-md-12 col-sm-12 feature-3">
+          <img data-aos='fade-left' src="https://www.who.int/images/default-source/searo---images/emergencies/covid19/how-to-protect/covid-how-to-protect-yourself-01.tmb-1200v.gif?sfvrsn=6c7046d_1" alt="Later" class="feature-img">
+          <div class="text-spacing text-muted">
+            <p>Go ahead to check out the type of vaccines made available by the Indian government.</p>
+          </div>
+          <a href="/vaccine-info"> <button type="button" class="btn btn-success">Vaccines Info</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!--COVID Guidelines-->
+
+
+  <section id="Guidelines">
+    <div class="Covid-guidelines" style="padding-top:80px">
+
+      <h1 class="section-heading guide-heading">COVID Guidelines</h1>
+
+      <div class="row guidelines-cards">
+        <div class="col-lg-4 col-md-12">
+          <div class="card ">
+            <img src="https://raw.githubusercontent.com/AkashKatiyar2509/Internproject/master/public/assets/images/cowin.png" class="card-img" alt="...">
+            <div class="card-body">
+              <center>
+                  <a href="https://www.cowin.gov.in/home" <button type="button" class="btn btn-outline-info">Co-win</button></a>
+                </center>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <div class="card">
+            <img src="https://raw.githubusercontent.com/AkashKatiyar2509/Internproject/master/public/assets/images/who.jpg" class="card-img" alt="...">
+            <div class="card-body">
+              <center>
+                <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" <button type="button" class="btn btn-outline-info">WHO</button></a>
+                </center>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <div class="card">
+            <img src="https://raw.githubusercontent.com/AkashKatiyar2509/Internproject/master/public/assets/images/aarogya-setu.png" class="card-img-top end" alt="...">
+            <div class="card-body">
+              <center>
+                  <a href="https://www.aarogyasetu.gov.in/" <button type="button" class="btn btn-outline-info">Arogya-Setu</button></a>
+                </center>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class='text-spacing' id="information">
+    <div style="padding:10px">
+      <div class="info" style="padding:10px">
+        <div class="wrapingimage">
+          <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/62273521550499.5630502127dbb.gif" alt="handwash-image" class="info-img">
+        </div>
+        <div class="wrap-text">
+          <h2 style="color:#a58faa">Be safe and aware!</h2>
+          <h3 style="color:#a58faa">Let's fight against</h3>
+          <h1 id="wraptext-heading">CORONA VIRUS!</h1>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CSS FlexBox -->
+    <div class="bigone">
+      <div class="flexbox">
+        <div class="flex-container">
+
+          <div data-aos='fade-right' class="flex-child">
+            <div class="do-title">
+              <h3>Do's <i class="far fa-check-circle"></i></h3>
+            </div>
+            <div class="do-dont-info">
+              <ul style="list-style-type: none">
+                <li><i class="fas fa-pump-medical fa-2x"></i> Wash your Hands more often or use Hand Sanitier</li>
+                <li><i class="fas fa-users fa-2x"></i> Avoid Large Gatherings</li>
+                <li><i class="fas fa-trash fa-2x"></i> Throw used Tissues into Closed Bins</li>
+                <li><i class="fas fa-syringe fa-2x"></i> Get Vaccinated</li>
+                <li><i class="fas fa-people-arrows fa-2x"></i> Maintain Social Distancing</li>
+                <li><i class="fas fa-user-md fa-2x"></i> See a Doctor if You Feel Unwell</li>
+
+              </ul>
+            </div>
+          </div>
+
+          <div data-aos='fade-left' class="flex-child flex-child-2">
+            <div class="flex-child2">
+              <div class="dont-title">
+                <h3>Don'ts <i class="far fa-times-circle"></i></h3>
+              </div>
+              <div class="do-dont-info">
+                <ul style="list-style-type: none">
+                  <li><i class="fas fa-head-side-cough-slash fa-2x"></i> Close Contact with
+                    anyone, if you're experiencing cough and fever</li>
+                  <li><i class="far fa-eye-slash fa-2x"></i> Touch Your Eyes, Nose and Mouth</li>
+                  <li><i class="fas fa-coffee fa-2x"></i> Going to Cafe, Resturants, Malls, etc.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex-child3">
+              <div style="background-color:#aa2ee6">
+                <h3>For Further information:</h3>
+              </div>
+              <div class="flex-child-child">
+                <h5>Visit <a href="https://www.cowin.gov.in/home" style="color: #fff;"><u style="color:#aa2ee6">Cowin Website</u></a></h5>
+                <h5>Helpline Number : +91-11-23978046</h5>
+                <h5>Toll Free Number: 1075</h5>
+                <h5>Email at ncov2019@gov.in</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!--about us-->
+
+  <section id="profile-cards">
+
+    <div class="profile-container">
+        <h1 data-aos='fade-right' class="profile-heading">About US</h1>
+
+        <div class="container profile-cards">
+          <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xs-12">
+              <div class="our-team">
+                <div class="picture">
+                     <img class="img-fluid"  src="assets/images/akash.png">
+                </div>
+                <div class="team-content">
+                  <h3 class="name">Akash Katiyar</h3>
+                 <h4 class="title">Student at IIT(BHU) Varanasi</h4>
+                 <h4 class="title">Web Developer</h4>
+                </div>
+                <ul class="social">
+                  <li><a href="https://www.linkedin.com/in/akash-katiyar-557abb159" class="fa fa-linkedin"></a></li>
+                  <li><a href="https://www.facebook.com/kalpana.katiyar.330" class="fa fa-facebook"></a></li>
+                  <li><a href="https://github.com/akashkatiyar2509" class="fa fa-github"></a></li>
+                  <li><a href="https://www.instagram.com/____goodfornothing/" class="fa fa-instagram"></a></li>
+                  <li><a href="mailto:akash.katiyar.mec19@iitbhu.ac.in" class="fa fa-envelope"></a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xs-12">
+              <div class="our-team">
+                <div class="picture">
+                     <img class="img-fluid" src="assets/images/nick.png">
+                </div>
+                <div class="team-content">
+                  <h3 class="name">Aman Kumar</h3>
+                 <h4 class="title">Student at IIT(BHU) Varanasi</h4>
+                 <h4 class="title">Web Developer</h4>
+                </div>
+                <ul class="social">
+                  <li><a href="https://www.linkedin.com/in/aman-kumar-613883192/" class="fa fa-linkedin"></a></li>
+                  <li><a href="https://www.facebook.com/profile.php?id=100022723002912" class="fa fa-facebook"></a></li>
+                  <li><a href="https://github.com/dev-it-aman" class="fa fa-github"></a></li>
+                  <li><a href="https://instagram.com/aman_singh1906?utm_medium=copy_link" class="fa fa-instagram"></a></li>
+                  <li><a href="mailto:aman.kumar.mec19@iitbhu.ac.in" class="fa fa-envelope"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </section>
+
+
+
+
+  <!-- Footer -->
+    <footer class="bg-light text-center text-lg-start">
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright: <a class="text-dark" href="/">Vaccine-Info </a> with ❤ by Akash and Aman
+      </div>
+    </footer>
+    <script src="js/vaccination-doses.js"></script>
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

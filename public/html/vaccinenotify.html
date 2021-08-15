@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Vaccinenotify</title>
+  <!-- CSS only -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"><link rel="stylesheet" href="/css/vaccine-notify.css">
+  <!-- Fonts Awesome Path -->
+  <script src="https://kit.fontawesome.com/6ff6c73007.js" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+<body>
+  <!--Navigation-bar -->
+  <section id="Navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-yellow">
+      <div class="container-fluid">
+        <a class="navbar-brand brand-logo" href="#">COvid-19 Vaccination</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav navbar nav-custom ml-auto">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="/">Home</a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                More Info
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                <a class="dropdown-item" href="vaccine-info">Vaccine Info</a>
+
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="contactus">Contact us</a>
+            </li>
+          </ul>
+        </div>
+
+    </nav>
+
+  </section>
+
+
+  <!-- Form  -->
+  <div class="middle-part" style="background-color:#f2dac3">
+    <div>
+      <center style="padding-top:30px">
+        <h5 style="color: #a35709;"><img height="50px" style="padding-right:5px" width="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Light_bulb_icon_red.svg/1200px-Light_bulb_icon_red.svg.png">Get notified instantly whenever
+          vaccine near you is available!</h5>
+      </center>
+    </div>
+
+    <div class="form-data centre">
+
+      <div class="container">
+        <div id="selectByState">
+          <form class="" method="POST" action="/post-feedback">
+            <select class="custom-select form-control" style="border-color: grey" name="state" id="state">
+              <option value="no-option">Select State</option>
+            </select>
+            <select class="custom-select form-control" style="border-color: grey" name="district" id="district">
+              <option value="no-option">Choose District</option>
+            </select>
+            <input type="email" name="email" style="border-color: grey" class="form-control" id="email" placeholder="Email" required>
+            <input type="number" name="pincode" style="border-color: grey" class="form-control" id="email" placeholder="Pincode">
+            <div class="">
+              <button id="getnotified" type="submit" class="btn  btn-success btn-outline btn-block getnotified">Get Notified</button>
+            </div>
+          </form>
+
+
+        </div>
+      </div>
+    </div>
+    <center>
+      <div class="form-data">
+        <strong> Can't find your city?</strong> Nothing to worry,reach out to us through the chatbox on this page and we'll add it right away.
+      </div>
+
+    </center>
+  </div>
+  <div class="half-image">
+    <center>
+
+      <img src="https://static.vecteezy.com/system/resources/previews/000/834/961/original/people-wearing-masks-surrounded-by-virus-vector.jpg" height="300px" style="border-radius:50%" width="150px" alt="" class="vaccine-img">
+
+    </center>
+
+  </div>
+  <div class="query">
+       <div ><p style="font-size:1.3rem">
+        Already Registered? Want to <a href="/unsubscribe">unsubscribe</a>?
+       </p> </div>
+  </div>
+
+</body>
+<footer>
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2020 Copyright: <a class="text-dark" href="/">Vaccine-Info </a> with ❤ by Akash and Aman.
+  </div>
+
+
+  <script src="/js/states.js" charset="utf-8"></script>
+  <script src="/js/index.js" charset="utf-8"></script>
+
+</footer>
+
+</html>

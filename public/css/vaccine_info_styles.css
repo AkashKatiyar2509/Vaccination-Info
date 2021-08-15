@@ -1,0 +1,111 @@
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  margin-top: 73px;
+  overflow-x: hidden;
+}
+
+/*navigation*/
+
+.navbar{
+  height: auto;
+}
+
+.brand-logo {
+  font-family: 'Pattaya',sans-serif;
+  padding-left: 25px;
+  font-size: 1.2rem;
+}
+
+.nav-link,.dropdown-item{
+   font-size: 0.75rem;
+}
+
+/*statistics*/
+      .vaccine-data {
+        text-align: center;
+        padding: 3% 10% 5%;
+          background-color:#4ca1a3;
+      }
+
+      .stats {
+        padding: 3% ;
+      }
+      .inner{
+        background-color:#a6d6d6;
+      }
+      .outer{
+        background-color:#e1e5ea;
+      }
+
+  /*covaxin*/
+        .covaxin {
+          padding: 4% 10%;
+          height: auto;
+          background-color: white;
+        }
+
+        .vaccine-img {
+          height: 250px;
+          width: 300px;
+          padding: 15px;
+          border-radius: 50%;
+        }
+
+        .list {
+          font-family: 'Ubuntu', sans-serif;
+          padding-top: 10px;
+        }
+
+        .row {
+          padding-top: 10px;
+        }
+
+/*covishield*/
+.covishield{
+  background-color: #9ede73;
+  padding: 4% 10%;
+}
+
+.vaccine-img{
+  width: 250px;
+  height: 250 px;
+  border-radius: 100%;
+}
+
+.NEWS{
+  height: auto;
+  padding: 4% 10%;
+}
+.news-heading {
+    padding-bottom: 15px;
+}
+
+
+
+
+/* Scroll Bar  */
+
+.scrollbar-success::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+.scrollbar-success::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+.scrollbar-success::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #00C851;
+}
+
+.scrollbar-success {
+    scrollbar-color: #00C851;
+}
